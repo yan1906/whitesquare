@@ -14,6 +14,19 @@ body{
 	width:  960px;
 	margin: 0 auto;
 }
+[class^=col-]{
+	float: left;
+	box-sizing: border-box;
+}
+.col-half{
+	width: 50%;
+}
+.col-third{
+	width: 33.33%
+}
+.header{
+	margin-bottom: 30px;
+}
 .top-bar .logo{
 	float: left;
 }
@@ -67,5 +80,103 @@ body{
 .nav ul li a:hover{
 	color: #fff;
 	background-color: #29c5e6;
+	transition: 0.6s color;
 
+}
+.slider{
+	position: relative;
+	padding-bottom: 30px;
+}
+.slider .slide{
+	background-color: #e2e2e2;
+	padding: 40px;
+	height: 280px;
+	display: none;
+
+}
+.slider .slide h2{
+	color: #5a5a5a;
+	font-size: 40px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.slider .slide p.subtitle{
+	color: #acacac;
+	font-size: 20px;
+	font-weight: 300;
+
+}
+.slider input[type=radio]:checked + label + div{
+	display: block;
+}
+.slider input[type=radio]{
+	display: none;
+}
+.slider{
+	background-color: grey;
+	position: relative;
+	padding-bottom: 50px;
+	margin-bottom: 30px;
+}
+label{
+	text-transform: uppercase;
+	padding-left: 36px;
+	position: absolute;
+	top: 100%;
+	margin-left: 5%;
+	margin-top: -4%;
+}
+label:before{
+	content: attr(title);
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	background-color: #8f8f8f;
+	display: inline-block;
+	left: 0;
+	top: 50%;
+	margin-top: -12px;
+	color: #fff;
+	text-align:center;
+	line-height: 24px;
+}
+.slider input[type=radio]:checked + label{
+	color: #29c5e6;
+}
+.slider input[type=radio]:checked + label:before{
+	background-color:  #29c5e6;
+}
+label[for=first]{
+	left: 5px;
+}
+label[for=second]{
+	left: 25%;
+}
+label[for=third]{
+	left: 50%;
+}
+label[for=fourth]{
+	left: 75%;
+}
+div.heading h3{
+	position: relative;padding-left: 20px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+div.heading h3:before{
+	content: "";
+	width: 15px;
+	height: 15px;
+	background-color: #29c5e6;
+	position: absolute;left: 0;
+	top: 50%;
+	margin-top: -7.5px;
+
+
+}
+div.heading h3:after{
+	content: "";
+	width: auto;
+	height: 15px;
+	background-color: aqua;
 }
