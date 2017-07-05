@@ -2,10 +2,10 @@
   width: device-width;
 }
 .header{
-    width:1280px;
+    width:100%;
 }
 .main{
-    width:1280px;
+    width:100%;
 }
 body:after {
     content : "";
@@ -13,14 +13,14 @@ body:after {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("../img/back.png"); 
+  /*  background-image: url("../img/back.png"); */
     width: 100%;
     height: 100%;
     opacity : 0.2;
     z-index: -1;
 }
 body{
-	width: 1280px;
+	width: 100%;
 	border-top: 5px solid #7e7e7e;
 	margin: 0;
 	font-family: 'Oswald';
@@ -34,13 +34,15 @@ body{
 
 
 .container{
-	width:  960px;
+	width:  75%;
 	margin: 0 auto;
 	position: relative;
 }
 [class^=col-]{
 	float: left;
 	box-sizing: border-box;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .col-half{
 	width: 50%;
@@ -55,10 +57,11 @@ body{
 .clients-panel{
 	width: 100%;
 	display: inline-block;
-	margin-top: 32px;	
+	margin-top: 32px;
+	position: relative;	
 }
 .footer{
-	width: 1280px;
+	width: 100%;
 	height: 112px;
 	background-color: #7e7e7e;
 	margin-top: 3%;
@@ -231,13 +234,15 @@ label[for=fourth]{
 	left: 75%;
 }
 div.heading{
-	display: inline-block;
+	overflow: hidden;
 }
 div.heading h3{
-	position: relative;padding-left: 20px;
-	text-transform: uppercase;
-	margin-bottom: 20px;
-	color:  #7e7e7e;
+	position: relative;
+    padding-left: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #7e7e7e;
+    margin-right: 10px;
 }
 div.heading-footer h3{
 	color: #f8f8f8;
@@ -259,34 +264,64 @@ div.heading h3:before{
 }
 div.heading h3:after{
 	content: "";
-	width: auto;
-	height: 15px;
-	background-color: aqua;
+    width: 100%;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    background-image: url(../img/transparent.png);
+    background-repeat: repeat-x;
+    margin-left: 15px;
+}
+div.content-wrapper{
+	float: left;
+    width: 68%;
+    padding-left: 10px;
 }
 div.content-wrapper p.main-text{
 	color: #8f8f8f;
 	font-size: 12px;
+	padding-bottom: 36px;
+}
+div.col-third div.content-wrapper p.main-text{
+	padding-bottom: 18px;
+}
+div.img-wrapper{
+	padding: 1px;
+    display: inline-block;
+    float: left;
+    border: 1px solid #cccccc;
+}
+div.clients-panel div.img-wrapper12{
+	padding: 1px;
+    display: inline-block;
+    float: left;
+    margin-left: 8%;
 }
 div.img-wrapper img{
 	float: left;
 	display: inline-block;
-	padding-right: 19px;
+	
 }
 div.content-wrapper span a.more, p.more{
 	color: #525252;
 	font-size: 12px;
-	line-height: 62px;
+	/*line-height: 104px;*/
 }
 div.img-wrapper1 img{
 	float: left;
 	display: inline-block;
 	padding-right: 11px;
 }
+div.col-third1 div.content-wrapper{
+	height: 50px;
+}
 div.col-third1 div.content-wrapper p.main-text-header{
 	font-size: 11px;
 	color: #525252;
+	width: 100%;
 
 }
+
 div.col-third1 div.content-wrapper p.main-text{
 	font-size: 10px;
 
@@ -348,7 +383,7 @@ div.logo-footer{
 }
 div.content-wrapper-footer43{
 	display: inline-block;
-    margin-left: 38%;
+    margin-left: 32%;
 }
 div.content-wrapper-footer43 p{
 	font-family: tahoma regular;
@@ -358,11 +393,9 @@ div.content-wrapper-footer43 p{
 div.content-wrapper-footer43 span{
 	text-decoration: underline;
 }
-div.transp{
-	height: 15px;
-	width: inherit;
-	float: right;
-	background-image: url('../img/transparent.png');
-	padding-left: 50px;
-    padding-top: 7px;
+.row{
+	margin-bottom: 30px;
+}
+.row:after{
+	clear: both;
 }
